@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.takeyourpill">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_pill"
+        android:label="Take your pill"
+        android:roundIcon="@mipmap/ic_pill"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TakeYourPill">
+
+        <activity
+            android:name=".activities.AddTimeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomNoActionBarTheme" />
+        <activity
+            android:name=".activities.TimeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomNoActionBarTheme"/>
+        <activity
+            android:name=".activities.TimeMainScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomNoActionBarTheme"/>
+        <activity
+            android:name=".activities.PillActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomNoActionBarTheme" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomNoActionBarTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.UserActivity"
+            android:label="DATOS DE USUARIO"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomNoActionBarTheme" />
+        <activity
+            android:name=".activities.AddPillActivity"
+            android:label="AÑADIR MEDICACIÓN"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomNoActionBarTheme" />
+        <activity
+            android:name=".activities.MainScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomNoActionBarTheme" />
+        <receiver android:name=".utils.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true">
+        </receiver>
+    </application>
+
+</manifest>
